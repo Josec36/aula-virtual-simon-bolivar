@@ -1,0 +1,361 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --guinda:#6B1A2A;
+  --guinda-dark:#4A0F1C;
+  --crema:#F5EDD8;
+  --crema-light:#FAF6EC;
+  --oro:#C9A84C;
+  --texto:#2C1A1A;
+}
+
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--crema-light);
+  color:var(--texto);
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:72px;
+
+  background:rgba(107,26,42,0.95);
+
+  backdrop-filter:blur(10px);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 2rem;
+
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.escudo{
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:var(--crema);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+
+  color:var(--guinda);
+}
+
+.logo-info{
+  display:flex;
+  flex-direction:column;
+}
+
+.logo-nombre{
+  color:white;
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+}
+
+.logo-sub{
+  color:#ddd;
+  font-size:11px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.btn-login{
+  background:var(--oro);
+  color:var(--guinda);
+  padding:10px 16px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.45),
+  rgba(0,0,0,0.45)),
+
+  url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  padding:2rem;
+}
+
+.hero-content{
+  max-width:800px;
+}
+
+.hero-badge{
+  display:inline-block;
+
+  background:rgba(201,168,76,0.2);
+
+  color:var(--oro);
+
+  padding:8px 14px;
+
+  border-radius:30px;
+
+  margin-bottom:1rem;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:60px;
+  color:white;
+  margin-bottom:1rem;
+}
+
+.hero p{
+  color:#eee;
+  line-height:1.7;
+  margin-bottom:2rem;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.btn-principal,
+.btn-secundario{
+  padding:14px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.btn-principal{
+  background:var(--oro);
+  color:var(--guinda);
+}
+
+.btn-secundario{
+  border:1px solid white;
+  color:white;
+}
+
+/* SECCIONES */
+
+.section{
+  padding:6rem 2rem;
+}
+
+.crema{
+  background:var(--crema);
+}
+
+.titulo-seccion{
+  text-align:center;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:42px;
+
+  color:var(--guinda);
+
+  margin-bottom:3rem;
+}
+
+/* HISTORIA */
+
+.historia-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.historia-texto p{
+  margin-bottom:1rem;
+  line-height:1.8;
+}
+
+.historia-img{
+  height:320px;
+
+  background:#ddd;
+
+  border-radius:20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* VALORES */
+
+.valores-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.valor-card{
+  background:white;
+
+  padding:2rem;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  transition:0.2s;
+}
+
+.valor-card:hover{
+  transform:translateY(-6px);
+}
+
+.valor-card span{
+  font-size:40px;
+}
+
+.valor-card h3{
+  margin:1rem 0;
+  color:var(--guinda);
+}
+
+/* DIRECTORA */
+
+.directora-box{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.directora-img{
+  width:220px;
+  height:220px;
+
+  border-radius:20px;
+
+  background:#ddd;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.mensaje{
+  font-size:20px;
+  line-height:1.8;
+  font-style:italic;
+}
+
+.firma{
+  display:block;
+  margin-top:1rem;
+  color:var(--guinda);
+  font-weight:600;
+}
+
+/* GALERÍA */
+
+.galeria-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.galeria-item{
+  height:260px;
+
+  background:#ddd;
+
+  border-radius:20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:0.2s;
+}
+
+.galeria-item:hover{
+  transform:scale(1.03);
+}
+
+/* CONTACTO */
+
+.contacto-box{
+  text-align:center;
+  line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--guinda-dark);
+  color:white;
+  text-align:center;
+  padding:2rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .historia-grid,
+  .directora-box{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+}
+
+@media(max-width:700px){
+
+  nav{
+    display:none;
+  }
+
+}

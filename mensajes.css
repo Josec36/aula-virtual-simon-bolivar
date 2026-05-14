@@ -1,0 +1,16 @@
+.mensaje{
+  background:white;
+  border:1px solid var(--borde);
+  border-radius:12px;
+  padding:1.5rem;
+  margin-bottom:1rem;
+}
+
+.mensaje h3{
+  color:var(--guinda);
+  margin-bottom:0.5rem;
+}
+
+.mensaje p{
+  color:var(--texto-suave);
+}

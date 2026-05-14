@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - Colegio Simón Bolívar</title>
+
+<title>Login — Colegio Simón Bolívar</title>
 
 <link rel="stylesheet" href="login.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="box">
-  <h2>Iniciar Sesión</h2>
+<div class="login-container">
 
-  <input type="text" id="user" placeholder="Usuario">
-  <input type="password" id="pass" placeholder="Contraseña">
+  <div class="box login-card">
 
-  <button onclick="login()">Entrar</button>
+    <div class="logo-area">
 
-  <div class="error" id="error"></div>
-</div>
+      <div class="escudo">SB</div>
 
-<script>
-function login(){
+      <h1>Colegio Simón Bolívar</h1>
 
-  const user = document.getElementById("user").value;
-  const pass = document.getElementById("pass").value;
+      <p>Aula Virtual · Sistema Educativo</p>
 
-  if(user === "alumno" && pass === "1234"){
-    window.location.href = "index.html";
-  }
-  else if(user === "profesor" && pass === "admin"){
-    window.location.href = "index.html";
-  }
-  else{
-    document.getElementById("error").innerText =
-      "Usuario o contraseña incorrectos";
-  }
-}
-</script>
+    </div>
+
+    <h2>Iniciar Sesión</h2>
+
+    <select id="rol">
+
+      <option value="estudiante">
+        Estudiante
+      </option>
+
+      <option value="profesor">
+        Profesor
+      </option>
+
+      <option value="admin">
+        Administrador
+      </option>
+
+    </select>
+
+    <input
+      type="text"
+      id="user"
+      placeholder="Usuario"
+    >
+
+    <input
+      type="password"
+      id="pass"
+      placeholder="Contraseña"
+    >
+
+    <button onclick="login()">
+      Entrar al Sistema
+    </button>
+
+    <div
+      class="error"
+      id="error">
+    </div>
+
+  </div> <!-- login-card -->
+
+</div> <!-- login-container -->
+
+<script src="login.js"></script>
 
 </body>
 </html>

@@ -521,3 +521,77 @@ footer strong {
   color: var(--oro);
   font-weight: 500;
 }
+
+
+/* ── HEADER RIGHT ── */
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+/* ── MENÚ HAMBURGUESA ── */
+
+.btn-hamburguesa{
+  display:none;
+  width:42px;
+  height:42px;
+  border:none;
+  background:rgba(255,255,255,0.08);
+  border-radius:10px;
+  cursor:pointer;
+
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+}
+
+.btn-hamburguesa span{
+  width:20px;
+  height:2px;
+  background:var(--crema);
+  border-radius:2px;
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 780px){
+
+  header{
+    padding:0 1rem;
+  }
+
+  nav{
+    position:absolute;
+    top:68px;
+    left:0;
+    width:100%;
+
+    background:var(--guinda);
+
+    flex-direction:column;
+    padding:1rem;
+
+    display:none;
+    border-bottom:2px solid var(--oro);
+  }
+
+  nav.nav-abierto{
+    display:flex;
+  }
+
+  .btn-hamburguesa{
+    display:flex;
+  }
+
+  .logo-sub{
+    display:none;
+  }
+
+  .btn-usuario span{
+    display:none;
+  }
+
+}

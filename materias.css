@@ -1,0 +1,35 @@
+.materias-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+.materia-box{
+  background:white;
+  border:1px solid var(--borde);
+  border-radius:14px;
+  padding:2rem;
+  text-align:center;
+  transition:0.2s;
+}
+
+.materia-box:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 24px rgba(107,26,42,0.1);
+}
+
+.materia-box span{
+  font-size:42px;
+  display:block;
+  margin-bottom:1rem;
+}
+
+.materia-box h3{
+  color:var(--guinda);
+  margin-bottom:0.5rem;
+}
+
+.materia-box p{
+  color:var(--texto-suave);
+  font-size:14px;
+}

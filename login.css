@@ -77,3 +77,97 @@ button:hover{
   font-size:12px;
   color:red;
 }
+
+/* ── CONTENEDOR LOGIN ── */
+
+.login-container{
+  width:100%;
+  padding:1.5rem;
+}
+
+.login-card{
+  width:100%;
+  max-width:380px;
+}
+
+/* ── LOGO ── */
+
+.logo-area{
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+
+.escudo{
+  width:70px;
+  height:70px;
+
+  margin:auto auto 1rem;
+
+  border-radius:50%;
+
+  background:var(--crema);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  font-weight:700;
+
+  color:var(--guinda);
+
+  border:2px solid var(--oro);
+}
+
+.logo-area h1{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--guinda);
+  font-size:30px;
+  margin-bottom:0.3rem;
+}
+
+.logo-area p{
+  font-size:12px;
+  color:#777;
+  letter-spacing:0.08em;
+}
+
+/* ── SELECT ── */
+
+select{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+
+  border:1px solid #ddd;
+  border-radius:10px;
+
+  outline:none;
+
+  background:white;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+select:focus{
+  border-color:var(--guinda);
+  box-shadow:0 0 0 3px rgba(107,26,42,0.1);
+}
+
+/* ── RESPONSIVE ── */
+
+@media(max-width:480px){
+
+  .box{
+    width:100%;
+    padding:28px;
+  }
+
+  h2{
+    font-size:24px;
+  }
+
+}
